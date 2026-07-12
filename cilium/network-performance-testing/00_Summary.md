@@ -36,3 +36,15 @@ The performance metrics were collected using tools such as iperf3 and netperf, f
 | Bidirectional Throughput (TX-C/RX-C) (Gbit/s) | 4.0/2.4 | 4.4/3.8 | 10.5/9.1 | 12.0/11.0 |
 | TCP Latency (Mean µs/Transaction Rate) | 164/6095 | 330/3030 | 261/3822 | 124/ 8072 |
 | TCP Stream (Throughput 10^6bits/sec) | 6809 | 4608 | 6664 | 11927 |
+
+## Results Summary - IPsec on BYOCNI on Azure Kubernetes Service - Cilium 1.19.3
+
+| Test | Geneve | Geneve + IPsec | Native Routing + IPsec | Native Routing |
+| --- | --- | --- | --- | --- |
+| TCP Throughput (Gbit/s) | 7.2 | 2.4 | 2.6 | 12.0 |
+| UDP Throughput (Gbit/s) | 1.6 | 0.8 | 1.0 | 2.0 |
+| UDP Throughput Lost Datagrams (%) | 3.1 | 0.4 | 1.4 | 1.2 |
+| Bidirectional Throughput (TX-C/RX-C) (Gbit/s) | 4.0/2.4 | 0.5/2.3 | 2.0/0.5 | 12.0/11.0 |
+| TCP Latency (Mean µs/Transaction Rate) | 164/6095 | 198/5054 | 183/5468 | 124/ 8072 |
+| UDP Latency (Mean µs/Transaction Rate) | 161/6220 | 197/5067 | 180/5539 | 122/ 8158 |
+| TCP Stream (Throughput 10^6bits/sec) | 6809 | 2368 | 2552 | 11927 |
